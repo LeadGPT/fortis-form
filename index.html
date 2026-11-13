@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speak With an Adviser | Fortis Wealth Insights</title>
+<meta name="description" content="Independent financial insights, expert education and guidance for wealth management. Speak with an FCA-authorised adviser through Fortis Wealth Insights.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+</div>
+
+<header class="site-header">
+  <a class="site-header-link" href="https://fortiswealthinsights.co.uk">
+    <span class="wordmark">FORTIS <span class="wordmark-light">WEALTH INSIGHTS</span></span>
+  </a>
+  <span class="site-header-tagline">Independent Financial Insights &amp; Education</span>
+</header>
+
+<main class="stage">
+  <div class="card">
+
+    <div class="stem" aria-hidden="true">
+      <svg viewBox="0 0 8 400" preserveAspectRatio="none">
+        <path id="stemPath" d="M4,0 L4,400" />
+      </svg>
+      <div class="node node-0" data-step="0"></div>
+      <div class="node node-1" data-step="1"></div>
+      <div class="node node-2" data-step="2"></div>
+      <div class="node node-3" data-step="3"></div>
+      <div class="node node-4" data-step="4"></div>
+    </div>
+
+    <p class="progress-label" id="progressLabel"></p>
+
+    <form id="leadForm" novalidate>
+
+      <!-- honeypot -->
+      <input type="text" name="website" id="website" class="hp" tabindex="-1" autocomplete="off">
+
+      <!-- STEP 0 - Welcome -->
+      <section class="step active" data-step="0">
+        <p class="eyebrow">Thanks for getting back to us</p>
+        <h1 class="display">Let's find you<br>the right adviser.</h1>
+        <p class="lede">You replied to our note, so here's the short qualification step before we book anything in. It takes less than 90 seconds, and helps us match you with the most appropriate FCA-authorised adviser in our network.</p>
+
+        <ul class="trust-row">
+          <li><span class="trust-dot"></span>Under 90 seconds</li>
+          <li><span class="trust-dot"></span>FCA-authorised advisers only</li>
+          <li><span class="trust-dot"></span>No obligation</li>
+        </ul>
+
+        <p class="firm-note">Our network draws on established, regulated firms including <strong>True Potential</strong>, <strong>AFH</strong>, <strong>Mattioli Woods</strong>, <strong>Quilter</strong>, <strong>New Leaf</strong> and <strong>Julian Harris</strong>, among others. Wherever you're matched, it's with a name you can look up and trust.</p>
+
+        <button type="button" class="btn btn-primary" data-next>Get started</button>
+
+        <p class="edu-note">A quick note on that middle point: "FCA-authorised" means regulated by the UK's Financial Conduct Authority, the body that oversees financial advice in the UK. It's the baseline check worth doing before you take advice from anyone.</p>
+      </section>
+
+      <!-- STEP 1 - Core details -->
+      <section class="step" data-step="1">
+        <p class="step-num">01</p>
+        <p class="eyebrow">A few quick details</p>
+        <h2 class="display-sm">Nothing complicated. Just enough for us to reach out properly.</h2>
+
+        <div class="field">
+          <label for="name">What's your full name?</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+          <span class="error" data-error-for="name"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Where can we reach you by email? <span class="req">Required</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" inputmode="email">
+          <span class="error" data-error-for="email"></span>
+        </div>
+
+        <div class="field">
+          <label for="phone">And a good number to call? <span class="req">Required</span></label>
+          <div class="phone-group">
+            <span class="phone-prefix">+44</span>
+            <input type="tel" id="phone" name="phone" placeholder="7700 900000" required autocomplete="tel-national" inputmode="tel">
+          </div>
+          <p class="hint">UK numbers only for now. Just enter the number after the +44, with or without the leading 0.</p>
+          <span class="error" data-error-for="phone"></span>
+        </div>
+
+        <div class="field">
+          <label for="city">Whereabouts are you based?</label>
+          <input type="text" id="city" name="city" placeholder="Your city or town" required autocomplete="address-level2">
+          <span class="error" data-error-for="city"></span>
+        </div>
+
+        <div class="field">
+          <label for="income">What's your approximate annual income?</label>
+          <select id="income" name="income" required>
+            <option value="" disabled selected>Select a range</option>
+            <option value="Under £30,000">Under &pound;30,000</option>
+            <option value="£30,000 to £50,000">&pound;30,000 to &pound;50,000</option>
+            <option value="£50,000 to £70,000">&pound;50,000 to &pound;70,000</option>
+            <option value="£70,000 to £90,000">&pound;70,000 to &pound;90,000</option>
+            <option value="£90,000 to £110,000">&pound;90,000 to &pound;110,000</option>
+            <option value="£110,000 to £130,000">&pound;110,000 to &pound;130,000</option>
+            <option value="£130,000 to £150,000">&pound;130,000 to &pound;150,000</option>
+            <option value="£150,000 to £250,000">&pound;150,000 to &pound;250,000</option>
+            <option value="£250,000 to £500,000">&pound;250,000 to &pound;500,000</option>
+            <option value="Over £500,000">Over &pound;500,000</option>
+          </select>
+          <span class="error" data-error-for="income"></span>
+        </div>
+
+        <div class="field">
+          <label>Roughly, what's your investable asset range?</label>
+          <p class="hint">A ballpark is fine. We're not counting your house, pension pots you can't yet access, or anything you're not free to invest.</p>
+          <div class="choice-group" role="radiogroup" aria-label="Investable asset range">
+            <label class="choice">
+              <input type="radio" name="assets" value="Under £100,000" required>
+              <span>Under &pound;100,000</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="assets" value="£100,000 to £200,000">
+              <span>&pound;100,000 to &pound;200,000</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="assets" value="£200,000 to £250,000">
+              <span>&pound;200,000 to &pound;250,000</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="assets" value="Over £250,000">
+              <span>Over &pound;250,000</span>
+            </label>
+          </div>
+          <span class="error" data-error-for="assets"></span>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" class="btn btn-ghost" data-back>Back</button>
+          <button type="button" class="btn btn-primary" data-next data-validate="1">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 2 - Asset breakdown (qualified leads only) -->
+      <section class="step" data-step="2">
+        <p class="step-num">02</p>
+        <p class="eyebrow">Almost there, one more step after this</p>
+        <h2 class="display-sm">A quick breakdown helps us match you with the right specialist.</h2>
+        <p class="lede">Rough figures only, no account numbers or provider names needed. Leave anything blank that doesn't apply.</p>
+
+        <div class="breakdown-table">
+          <div class="breakdown-row">
+            <div class="breakdown-label">
+              <label for="pensionsCount">Pensions</label>
+              <p class="hint">Number of schemes</p>
+            </div>
+            <input type="number" id="pensionsCount" name="pensionsCount" min="0" step="1" placeholder="e.g. 3" class="breakdown-count">
+            <div class="breakdown-value">
+              <span class="value-prefix">&pound;</span>
+              <input type="number" id="pensionsValue" name="pensionsValue" min="0" step="1000" placeholder="Rough total value" data-breakdown-input>
+            </div>
+          </div>
+
+          <div class="breakdown-row">
+            <div class="breakdown-label">
+              <label for="isasValue">ISAs</label>
+            </div>
+            <div class="breakdown-value breakdown-value-full">
+              <span class="value-prefix">&pound;</span>
+              <input type="number" id="isasValue" name="isasValue" min="0" step="1000" placeholder="Rough value" data-breakdown-input>
+            </div>
+          </div>
+
+          <div class="breakdown-row">
+            <div class="breakdown-label">
+              <label for="cashValue">Cash</label>
+            </div>
+            <div class="breakdown-value breakdown-value-full">
+              <span class="value-prefix">&pound;</span>
+              <input type="number" id="cashValue" name="cashValue" min="0" step="1000" placeholder="Rough value" data-breakdown-input>
+            </div>
+          </div>
+
+          <div class="breakdown-row">
+            <div class="breakdown-label">
+              <label for="otherValue">Stocks, shares &amp; other investments</label>
+            </div>
+            <div class="breakdown-value breakdown-value-full">
+              <span class="value-prefix">&pound;</span>
+              <input type="number" id="otherValue" name="otherValue" min="0" step="1000" placeholder="Rough value" data-breakdown-input>
+            </div>
+          </div>
+        </div>
+
+        <div class="goal-bar-wrap">
+          <div class="goal-bar-track">
+            <div class="goal-bar-fill" id="goalFill"></div>
+          </div>
+          <p class="running-total" id="runningTotalLabel">Running total: <span id="runningTotal">&pound;0</span></p>
+        </div>
+        <span class="error" data-error-for="breakdown"></span>
+
+        <div class="nav-row">
+          <button type="button" class="btn btn-ghost" data-back>Back</button>
+          <button type="button" class="btn btn-primary" data-next data-validate="2">Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 3 - Objectives -->
+      <section class="step" data-step="3">
+        <p class="step-num">03</p>
+        <p class="eyebrow">Last step</p>
+        <h2 class="display-sm">What would you like help with?</h2>
+        <p class="hint">Pick anything that applies.</p>
+
+        <div class="field">
+          <div class="choice-group choice-group-check">
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Tax-efficient planning">
+              <span>Tax-efficient planning</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Retirement planning">
+              <span>Retirement planning</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Mortgages">
+              <span>Mortgages</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Protection">
+              <span>Protection</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Inheritance tax planning">
+              <span>Inheritance tax planning</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="Investment review">
+              <span>Investment review</span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="interest" value="General financial planning">
+              <span>General financial planning</span>
+            </label>
+            <label class="choice choice-other">
+              <input type="checkbox" name="interest" value="Other" id="interestOtherBox">
+              <span>Other</span>
+            </label>
+          </div>
+          <input type="text" id="interestOtherText" class="other-text hidden" placeholder="Tell us briefly what you'd like help with">
+        </div>
+
+        <div class="field">
+          <label for="notes">What would make this meeting a success for you?</label>
+          <p class="hint">Helps your adviser prepare properly before you speak.</p>
+          <textarea id="notes" name="notes" rows="4" placeholder="e.g. I'd like clarity on consolidating my pensions and a tax-efficient drawdown strategy."></textarea>
+        </div>
+
+        <div class="nav-row">
+          <button type="button" class="btn btn-ghost" data-back>Back</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Submit my details</button>
+        </div>
+      </section>
+
+      <!-- STEP 4a - Qualified ending -->
+      <section class="step" data-step="qualified">
+        <p class="eyebrow">You're a good fit</p>
+        <h1 class="display">You're in<br>good hands.</h1>
+        <p class="lede">Thanks for confirming those details. Our team will get back to you really soon to book you in with the most appropriate adviser for your situation. No scripts, just a real conversation.</p>
+        <p class="firm-note">You'll be matched with someone from an established, regulated firm we work with, such as True Potential, AFH, Mattioli Woods, Quilter, New Leaf or Julian Harris.</p>
+        <a class="btn btn-primary" href="https://fortiswealthinsights.co.uk" id="qualifiedRedirect">Visit Fortis Wealth Insights</a>
+      </section>
+
+      <!-- STEP 4b - Not qualified ending -->
+      <section class="step" data-step="notqualified">
+        <p class="eyebrow">Thank you</p>
+        <h1 class="display">Thanks for<br>stopping by.</h1>
+        <p class="lede">Right now, our adviser network is built for people with at least &pound;250,000 in investable assets, so we're not the right fit just yet. We appreciate you taking the time.</p>
+        <a class="btn btn-primary" href="https://fortiswealthinsights.co.uk">Visit Fortis Wealth Insights</a>
+      </section>
+
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p><a href="https://fortiswealthinsights.co.uk">fortiswealthinsights.co.uk</a> &middot; independent financial insights &amp; education.</p>
+  <p class="fine-print">Fortis Wealth Insights introduces prospective clients to FCA-authorised financial advisers. We do not provide regulated financial advice directly. <em>Adjust this line to match your actual regulatory disclosures.</em></p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
