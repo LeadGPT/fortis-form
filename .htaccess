@@ -1,0 +1,6 @@
+# One service, two hostnames:
+#   fortis-qualification.auracalls.live   -> the form (index.html)
+#   fortis-adviser-connect.auracalls.live -> the dashboard
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^fortis-adviser-connect\. [NC]
+RewriteRule ^$ php/dashboard.php [L]
