@@ -1,0 +1,10 @@
+# Block all direct access to this folder. Submissions are only ever
+# read through php/dashboard.php and php/export.php, both of which
+# require the admin password.
+Require all denied
+
+# Fallback for older Apache versions:
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>
